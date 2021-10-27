@@ -12,14 +12,15 @@ function NavBar() {
                     <a
                       href="#home" 
                       className="font-bold uppercase leading-relaxed inline-block whitespace-nowrap mr-4 py-2">
-                          <img src={logo} alt="Logo" className="w-24 ml-10 md:ml-20"></img>
+                          <img src={logo} alt="Logo accueil" className="w-24 ml-10 md:ml-20"></img>
                     </a>
                     <button 
                       aria-label="Bouton menu"
                       type="button"
                       onClick={() => setNavbarOpen(!navbarOpen)}
-                      className="cursor-pointer leading-none md:hidden mr-10 md:mr-20">
-                        <i class="fas fa-bars fa-2x"></i>
+                      className="cursor-pointer leading-none md:hidden mr-10 md:mr-20"
+                    >
+                        <i className="fas fa-bars fa-2x"></i>
                     </button>
                 </div>
                 <div 
@@ -31,7 +32,7 @@ function NavBar() {
                         <a  
                           href="#home"
                           className="uppercase font-bold leading-snug hover:text-red-700 active:text-red-700 px-3 py-4">
-                            <i class="fas fa-home fa-lg"></i>
+                            <i className="fas fa-home fa-lg"></i>
                             <span className="sr-only">Retour accueil</span>
                         </a>
                     </li>

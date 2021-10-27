@@ -1,15 +1,15 @@
 import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <main className="container mx-auto">
-        <Skills></Skills>
-        <Projects></Projects>
-      </main>
+      <Projects></Projects>
+      <Skills></Skills>
+      <Footer></Footer>
     </div>
   
   );

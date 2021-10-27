@@ -29,15 +29,16 @@ import { useState, createRef, React } from 'react';
                 scrollToImage(currentImage - 1);
             }
         };
-        const arrowStyle = 'text-2xl z-10 bg-gray-50 h-10 w-10 absolute rounded-full opacity-75 flex items-center justify-center top-1/2';
+        const arrowStyle = 'text-2xl z-10 bg-gray-50 h-10 w-10 absolute rounded-full opacity-75 flex items-center justify-center top-1/2 hover:bg-gray-500 hover:text-white transition-all duration-200 ease-in';
         const sliderButton = type => (
             <i className={`fas fa-chevron-${type === 'right' ? 'right' : 'left'}`}></i>
         )
         const sliderControl = (isLeft) => (
           <button  
            type="button"
+           aria-label={isLeft ? 'Défiler les images par la gauches' : 'Défilez les images par la droite'}
            onClick={isLeft ? previousImage : nextImage}
-           className={`=${arrowStyle} ${isLeft ? ' left-2' : ' right-2'}`}
+           className={`${arrowStyle} ${isLeft ? ' left-2' : ' right-2'}`}
            >
             <span role="img" aria-label={`Fleche ${isLeft ? 'gauche' : 'droite'}`}>
                 { isLeft ? sliderButton('left') : sliderButton('right')}
@@ -52,7 +53,7 @@ import { useState, createRef, React } from 'react';
                   {sliderControl(true)}
                   {props.images.map((img, i) => (
                       <div className="w-full flex-shrink-0 object-cover" key={img} ref={refs[i]}>
-                          <img src={img} className="w-full object-contain" alt={'Photo ' + img} />
+                          <img src={img} className="w-full object-contain" alt={img} />
                       </div>
                   ))}
                   {sliderControl()}

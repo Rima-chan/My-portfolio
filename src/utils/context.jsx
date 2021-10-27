@@ -1,5 +1,4 @@
 import React, { useState, createContext } from 'react';
-import projects from '../data/projectsData';
 
 export const ProjectsDataContext = createContext();
 
