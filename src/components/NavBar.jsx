@@ -1,12 +1,18 @@
 import logo from '../images/mb-logo-black.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 function NavBar() {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [scroll, setScroll] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll(window.scrollY > 10);
+        });
+    }, []);
     return(
         <>
-        <nav className="flex flex-wrap items-center bg-gray-50 bg-opacity-50">
+        <nav className={"w-full bg-gray-50 bg-opacity-50 transition-all duration-150 ease-in" + (scroll ? ' bg-gray-400 bg-opacity-60 ' : '')}>
             <div className="w-full flex flex-wrap items-center justify-between">
                 <div className={"w-full relative flex justify-between md:w-auto md:static md:bloc" + (navbarOpen ? " border-b border-gray-800 border-opacity-50" : "")} >
                     <a
@@ -38,16 +44,16 @@ function NavBar() {
                     </li>
                     <li className="nav-item">
                         <a  
-                          href="#skills"
+                          href="#projects"
                           className="flex items-center uppercase font-bold leading-snug hover:text-red-700 px-3 py-4">
-                            Compétences
+                            Projets
                         </a>
                     </li>
                     <li className="nav-item">
                         <a  
-                          href="#projects"
+                          href="#skills"
                           className="flex items-center uppercase font-bold leading-snug hover:text-red-700 px-3 py-4">
-                            Projets
+                            Compétences
                         </a>
                     </li>
                     <li className="nav-item">

@@ -6,9 +6,9 @@ import bgSkill from '../images/bg-server.jpg';
 function Skills() {
     return(
         <>
-        <div className="w-screen bg-red-500 bg-cover bg-no-repeat pb-16" style={{ backgroundImage: `url(${bgSkill})`}}>
-            <h2 className="uppercase text-4xl text-center font-bold tracking-widest py-10 text-white">Mes compétences</h2>
-            <div className="flex flex-wrap md:gap-20 md:flex-nowrap bg-gray-50 bg-opacity-80 mx-24 py-8 px-16 ">
+        <div className="bg-cover bg-no-repeat pb-16" style={{ backgroundImage: `url(${bgSkill})`}} id="skills">
+            <h2 className="uppercase text-3xl md:text-4xl tracking-widest text-center font-bold py-10 text-white">Mes compétences</h2>
+            <div className="flex flex-wrap md:gap-10 lg:gap-20 md:flex-nowrap bg-gray-50 bg-opacity-80 px-4 mx-4 py-6 sm:py-5 sm:px-10 ">
                 <div className="flex-1 md:pt-0">
                     <h3 className="text-center uppercase font-bold py-2">Front-end</h3>
                     <ul className="">
@@ -28,7 +28,7 @@ function Skills() {
                         <li><SkillBar name="WORDPRESS" rate="w-2/5"></SkillBar></li>
                     </ul>
                 </div>
-                <div className="md:flex-1 self-center flex flex-col gap-y-8">
+                <div className="md:flex-1 self-center flex flex-col gap-y-8 pt-10 pb-6">
                     <SkillItem content={skillsList.skill_1} icon="fa-cubes"></SkillItem>
                     <SkillItem content={skillsList.skill_2} icon="fa-laptop"></SkillItem>
                     <SkillItem content={skillsList.skill_3} icon="fa-database"></SkillItem>

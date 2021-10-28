@@ -1,8 +1,18 @@
+const { scale } = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        'xs' : '300px',
+        ...defaultTheme.screens,
+      },
+      zIndex: {
+        '-10': '-10',
+      },
       width: {
         '1/10': '10%',
         '1/5': '20%',
@@ -13,9 +23,6 @@ module.exports = {
         '7/10': '70%',
         '4/5': '80%',
         '9/10': '90%'
-      },
-      maxWidth: {
-        '1/6': '350px'
       },
       inset: {
         '1/2': '50%',
@@ -48,6 +55,18 @@ module.exports = {
           },
           '100%': {
             transform: 'scaleX(1)',
+          },
+          'fade-in': {
+            '0%': {
+              opacity: 0,
+              transform: 'scale(0)',
+              
+              
+            },
+            '100%': {
+              opacity: 0.5,
+              transform: 'scale(1)',
+            },
           }
         },
       },
@@ -55,6 +74,7 @@ module.exports = {
         'slide-in-left': 'slide-in-left 1s ease-out',
         'slide-out-left': 'slide-out-left 1s ease-in',
         'skill-bar': 'skill-bar 2s ease-in-out',
+        'fade-in': 'fade-in 3s ease-linear'
       }
     },
   },
