@@ -45,7 +45,11 @@ import { useState, createRef, React } from 'react';
             </span>
           </button>
         );
-        
+        const imageName = (filename) => {
+            const fullFilename = filename.split('/media/')[1];
+            const name = fullFilename.split('.')[0];
+            return name;
+        };
     return(
         <div className="flex justify-center items-center">
             <div className="relative w-full">
@@ -53,7 +57,7 @@ import { useState, createRef, React } from 'react';
                   {sliderControl(true)}
                   {props.images.map((img, i) => (
                       <div className="w-full flex-shrink-0 object-cover" key={img} ref={refs[i]}>
-                          <img src={img} className="w-full object-contain" alt={img} />
+                          <img src={img} className="w-full h-full object-contain" alt={imageName(img)} />
                       </div>
                   ))}
                   {sliderControl()}

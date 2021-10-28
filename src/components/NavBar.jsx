@@ -12,7 +12,7 @@ function NavBar() {
     }, []);
     return(
         <>
-        <nav className={"w-full bg-gray-50 bg-opacity-50 transition-all duration-150 ease-in" + (scroll ? ' bg-gray-400 bg-opacity-60 ' : '')}>
+        <nav className={"w-full bg-gray-50 bg-opacity-50 transition-all duration-150 ease-in" + (scroll ? ' bg-gray-400 bg-opacity-70 ' : '')}>
             <div className="w-full flex flex-wrap items-center justify-between">
                 <div className={"w-full relative flex justify-between md:w-auto md:static md:bloc" + (navbarOpen ? " border-b border-gray-800 border-opacity-50" : "")} >
                     <a

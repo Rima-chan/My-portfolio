@@ -1,4 +1,4 @@
-import { p1_img, p2_img } from './projectsImages';
+import { p1_img, p2_img, p3_img } from './projectsImages';
 
 export const projects = {
     "data": [
@@ -7,12 +7,13 @@ export const projects = {
             "title": "Site e-commerce",
             "type": "Projet formation web",
             "attachments": p1_img,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description": "Réalisation du MVP front-end d'un site e-commerce uniquement en CSS, HTML et JavaScript.",
             "langages": "Html, CSS, Javascript",
             "tags": ["html", "css", "javascript", "bootstrap"],
             "details": [
-                "Lorem ipsum dolor sit amet",
-                "consectetur adipiscing elit"
+                "Communication avec une API",
+                "Panier shopping",
+                "Formulaire sécurisé"
             ],
             "url": "https://rima-chan.github.io/E-commerce_Website/",
             "github": "https://github.com/Rima-chan/E-commerce_Website.git"
@@ -22,11 +23,14 @@ export const projects = {
             "title": "API Rest pour un site d'avis gastro",
             "type": "Projet formation web",
             "attachments": p2_img,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": ["NodeJS", "Express", "Mongoose"],
+            "description": "Réalisation d'une API REST (CRUD) pour un site d'avis gastronomiques (sauces piquantes).",
+            "langages": "NodeJS, Express, MongoDB",
+            "tags": ["NodeJS", "Express", "MongoDB"],
             "details": [
-                "Lorem ipsum dolor sit amet",
-                "consectetur adipiscing elit"
+                "Creation et authentification utilisateur",
+                "Création, ajout et modification de sauces",
+                "Système Like/Dislikes",
+                "Base de données sécurisés"
             ],
             "github": "https://github.com/Rima-chan/MarieBeaujeu_6_31072021.git"
         },
@@ -34,12 +38,17 @@ export const projects = {
             "id": "p3",
             "title": "Reseau social interne entreprise",
             "type": "Projet formation web",
-            "attachments": p2_img,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": ["NodeJS", "Express", "Mongoose", "VueJS", "Bootstrap"],
+            "attachments": p3_img,
+            "langages": "NodeJS, Express, Sequelize, Vue",
+            "description": "Réalisation du MVP d'un réseau social (partages d'images style 9gag) interne avec profils administrateurs.",
+            "tags": ["NodeJS", "Express", "Sequelize", "MySQL", "VueJS", "Bootstrap"],
             "details": [
-                "Lorem ipsum dolor sit amet",
-                "consectetur adipiscing elit"
+                "Creation compte, connexion, déconnexion utilisateur",
+                "Authentification utilisateur (normal/administrateur)",
+                "Publication, modification, suppresion d'un post",
+                "Publication, modification, suppression commantaire",
+                "Modification, suppression d'un profil utilisateur",
+
             ],
             "github": "https://github.com/Rima-chan/MarieBeaujeu_6_31072021.git"
         },
@@ -48,8 +57,9 @@ export const projects = {
             "title": "Apps JS",
             "type": "Projet perso",
             "attachments": p2_img,
+            "langages": "Javascript",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": ["Javascript"],
+            "tags": ["CSS", "Html", "Javascript"],
             "details": [
                 "Lorem ipsum dolor sit amet",
                 "consectetur adipiscing elit"

@@ -36,7 +36,7 @@ function ProjectModal(props) {
                             <div className="flex xs:flex-col md:flex-row px-6 pt-5 pb-8">
                                 <img className="sm:w-1/2 sm:self-center pb-6" height="200" src={props.project.attachments[0]} alt="Screen mobile et tablette"></img>
                                 <div className="flex flex-col w-full sm:px-5">
-                                    <h4 className="uppercase font-medium text-left">Infos projet : </h4>
+                                    <h4 className="uppercase font-medium text-left">{props.project.type}</h4>
                                     <p className="text-left text-sm mt-3 mb-3">{props.project.description}</p>
                                     <div className="flex flex-wrap justify-start space-x-2">
                                         {tags.map((tag, index) => (
