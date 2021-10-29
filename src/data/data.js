@@ -1,4 +1,4 @@
-import { p1_img, p2_img, p3_img } from './projectsImages';
+import { p1_img, p2_img, p3_img, p4_img } from './projectsImages';
 
 export const projects = {
     "data": [
@@ -50,21 +50,22 @@ export const projects = {
                 "Modification, suppression d'un profil utilisateur",
 
             ],
-            "github": "https://github.com/Rima-chan/MarieBeaujeu_6_31072021.git"
+            "github": "https://github.com/Rima-chan/MarieBeaujeu_7_21082021.git"
         },
         {
             "id": "p4",
             "title": "Apps JS",
             "type": "Projet perso",
-            "attachments": p2_img,
+            "attachments": p4_img,
             "langages": "Javascript",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "description": "Petites applications en Javascript",
             "tags": ["CSS", "Html", "Javascript"],
             "details": [
                 "Lorem ipsum dolor sit amet",
                 "consectetur adipiscing elit"
             ],
-            "github": "https://github.com/Rima-chan/MarieBeaujeu_6_31072021.git"
+            "url": "https://rima-chan.github.io/Apps-JS/",
+            "github": "https://github.com/Rima-chan/Apps-JS.git"
         }
     ] 
 }
