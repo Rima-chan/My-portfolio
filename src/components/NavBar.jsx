@@ -12,7 +12,7 @@ function NavBar() {
     }, []);
     return(
         <>
-        <nav className={"w-full bg-gray-50 bg-opacity-50 transition-all duration-150 ease-in" + (scroll ? ' bg-gray-400 bg-opacity-70 ' : '')}>
+        <nav className={"w-full bg-gray-50 bg-opacity-70 transition-all duration-150 ease-in" + (scroll ? ' bg-gray-400 bg-opacity-90 ' : '')}>
             <div className="w-full flex flex-wrap items-center justify-between">
                 <div className={"w-full relative flex justify-between md:w-auto md:static md:bloc" + (navbarOpen ? " border-b border-gray-800 border-opacity-50" : "")} >
                     <a
@@ -44,6 +44,7 @@ function NavBar() {
                     </li>
                     <li className="nav-item">
                         <a  
+                          onClick={() => setNavbarOpen(false)}
                           href="#projects"
                           className="flex items-center uppercase font-bold leading-snug hover:text-red-700 px-3 py-4">
                             Projets
@@ -51,6 +52,7 @@ function NavBar() {
                     </li>
                     <li className="nav-item">
                         <a  
+                          onClick={() => setNavbarOpen(false)}
                           href="#skills"
                           className="flex items-center uppercase font-bold leading-snug hover:text-red-700 px-3 py-4">
                             Compétences
@@ -59,6 +61,7 @@ function NavBar() {
                     <li className="nav-item">
                         <a  
                           href="#contact"
+                          onClick={() => setNavbarOpen(false)}
                           className="flex items-center uppercase font-bold leading-snug hover:text-red-700 px-3 py-4">
                             Contact
                         </a>

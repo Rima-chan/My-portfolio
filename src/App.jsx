@@ -8,7 +8,7 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
         <Header></Header>
         <Hero></Hero>
         <Projects></Projects>

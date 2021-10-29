@@ -9,11 +9,12 @@ function ProjectModal(props) {
         <>
         <button
           aria-label="Ouvrir details projet"
-          className="outline-none focus:outline-none pl-3"
+          className="outline-none focus:outline-none font-semibold uppercase pl-3"
           type="button"
           onClick={() => setShowModal(true)} 
-        >
-            <i className="fas fa-link" aria-label="Plus d'infos sur le projet"></i>
+        >   
+            {props.project.title}
+            <i className="fas fa-link pl-3" aria-label="Plus d'infos sur le projet"></i>
         </button>
         { showModal ? (
             <>
