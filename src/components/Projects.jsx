@@ -12,14 +12,14 @@ function Projects() {
         <>
         <div className="px-8 md:mx-8 md:px-0 lg:mx-10 xl:mx-16 mt-10 mb-14" id="projects">
             <h2 className="uppercase md:text-4xl text-3xl tracking-widest text-center font-bold mb-8 sm:mt-10 sm:mb-16">Projets</h2>
-            <div className="flex flex-wrap lg:flex-nowrap gap-8">
+            <section className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
                 {data && data.map((project) => (
                     <ProjectCard project={project} key={project.id}></ProjectCard>
                 ))}
                 {/* {data && data.map((project) => (
                     <p key={project.id}>{project.title}</p>
                 ))} */}
-            </div>
+            </section>
         </div>
         </>
     );

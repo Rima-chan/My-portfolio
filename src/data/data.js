@@ -20,10 +20,10 @@ export const projects = {
         },
         {
             "id": "p2",
-            "title": "API Rest pour un site d'avis gastro",
+            "title": "Backend - API Rest",
             "type": "Projet formation web",
             "attachments": p2_img,
-            "description": "Réalisation d'une API REST (CRUD) pour un site d'avis gastronomiques (sauces piquantes).",
+            "description": "Réalisation du backend (frontend déjà réalisé) d'un site d'avis gastronomiques (sauces piquantes) : création d'une API REST (CRUD).",
             "langages": "NodeJS, Express, MongoDB",
             "tags": ["NodeJS", "Express", "MongoDB"],
             "details": [
@@ -36,10 +36,10 @@ export const projects = {
         },
         {
             "id": "p3",
-            "title": "Reseau social interne entreprise",
+            "title": "Reseau social d'entreprise",
             "type": "Projet formation web",
             "attachments": p3_img,
-            "langages": "NodeJS, Express, Sequelize, Vue",
+            "langages": "NodeJS, Sequelize, Vue",
             "description": "Réalisation du MVP d'un réseau social (partages d'images style 9gag) interne avec profils administrateurs.",
             "tags": ["NodeJS", "Express", "Sequelize", "MySQL", "VueJS", "Bootstrap"],
             "details": [
@@ -58,7 +58,7 @@ export const projects = {
             "type": "Projet perso",
             "attachments": p4_img,
             "langages": "Javascript",
-            "description": "Petites applications en Javascript",
+            "description": "Réalisation de plusieurs applications avec Javascript : application météo (API Openweathermap), Todo liste, Sticky Note, application de recettes (API publique Spoonacular)",
             "tags": ["CSS", "Html", "Javascript"],
             "details": [
                 "Lorem ipsum dolor sit amet",

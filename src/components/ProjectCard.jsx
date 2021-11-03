@@ -1,17 +1,11 @@
-import Carousel from "./Carousel";
 import ProjectModal from "./ProjectModal";
 
 function ProjectCard(props) {
     return(
-        <div className="shadow-lg overflow-hidden flex flex-col justify-between">
-            <div>
-                <Carousel images={props.project.attachments}></Carousel>
-            </div>
-            <div className="flex flex-col items-center justify-center w-full text-center py-5 px-3 md:px-2">
-                <div className="flex">
-                    <ProjectModal project={props.project}></ProjectModal>
-                </div>
-                <p className="font-light uppercase pt-3">{props.project.langages}</p>
+        <div className="w-full shadow-lg overflow-hidden flex flex-col justify-between bg-white">
+            <img src={props.project.attachments[0]} alt="Capture écran du projet" className="flex-1 object-cover"></img>
+            <div className="group">
+                <ProjectModal project={props.project}></ProjectModal>
             </div>
          </div>
     );

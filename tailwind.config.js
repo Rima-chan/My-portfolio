@@ -73,12 +73,15 @@ module.exports = {
         'slide-in-left': 'slide-in-left 1s ease-out',
         'slide-out-left': 'slide-out-left 1s ease-in',
         'skill-bar': 'skill-bar 2s ease-in-out',
-        'fade-in': 'fade-in 3s ease-linear'
+        'fade-in': 'fade-in 1s ease-linear'
       }
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ['disabled'],
+      cursor: ['disabled'],
+    },
   },
   plugins: [],
 }

@@ -25,7 +25,7 @@ function ScrollButton() {
                 <button 
                 type="button"
                 aria-label="Retourner en haut de page"
-                className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-50 bg-opacity-60"
+                className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-50 bg-opacity-60 hover:bg-gray-500 hover:text-white transition-colors duration-200 ease-in"
                 onClick={scrollToTop}
                   >
                     <i className="fas fa-chevron-up"></i>

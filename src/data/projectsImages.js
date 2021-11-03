@@ -7,8 +7,8 @@ import p2_page_sauce2 from '../images/p6_likes.png';
 import p3_page_posts from '../images/p7_posts.png';
 import p3_devises from '../images/p7_screen_devises.png';
 import p3_page_inscription from '../images/p7_inscription.png';
-import p4_devises from '../images/apps_js_devises.png';
-import p4_apps from '../images/apps_js.png';
+import p4_devises from '../images/app_JS_devises_transparent.png';
+import p4_apps from '../images/recette_app_capture.png';
 import p4_meteo from '../images/app_meteo_capture.png';
 
 export const p1_img = [p1_devises, p1_page_accueil, p1_page_panier];

@@ -8,12 +8,12 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="bg-gray-100 overflow-x-hidden">
         <Header></Header>
         <Hero></Hero>
         <Projects></Projects>
         <Skills></Skills>
-        {/* <Contact></Contact> */}
+        <Contact></Contact>
         <Footer></Footer>
       <ScrollButton></ScrollButton>
     </div>
