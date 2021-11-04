@@ -1,6 +1,5 @@
-import logo from '../images/mb-logo-black.png';
 import { useState, useEffect } from 'react';
-
+import logo from '../images/mb-logo-black.png';
 
 function NavBar() {
     const [navbarOpen, setNavbarOpen] = useState(false);

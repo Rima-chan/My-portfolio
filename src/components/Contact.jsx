@@ -2,15 +2,15 @@ import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import Alert from "./Alert";
-import Spinner from "./Loader";
+import Spinner from "./Spinner";
+import { config } from '../data/configData';
 
 function Contact() {
     const { register, handleSubmit, formState: { errors }, reset} = useForm();
     const [ isLoading, setIsLoading ] = useState(false);
     const [data, setData ] = useState({});
     const [error, setError ] = useState(null);
-    const success = 'Message bien envoyé ! ';
-    const fail = 'Oups, il y a eu un problème...';
+    const message = { success: 'Message bien envoyé ! ', fail: 'Oups, il y a eu un problème...' };
     const onSubmit = data => {
         console.log(data);
         fetchData(data);
@@ -19,7 +19,7 @@ function Contact() {
     const fetchData = async(data) => {
         setIsLoading(true);
         try {
-            const response = await axios.post('http://localhost:5500/contact', data);
+            const response = await axios.post(`${config.production}/contact`, data);
             setData(response);
         } catch(e) {
             console.log(e);
@@ -85,8 +85,8 @@ function Contact() {
                     >
                         Envoyer</button>
                 </form>
-                { error ? (<Alert classes={'bg-gray-600 border-gray-600 text-green-gray font-semibold'} icon={'fas fa-exclamation-triangle'} content={fail}></Alert>) : null}
-                { data.status === 201 ? (<Alert classes={'bg-green-600 border-green-600 text-green-600 font-semibold'} icon={'far fa-check-circle'} content={success}></Alert>) : null}
+                { error ? (<Alert classes={'bg-gray-600 border-gray-600 text-green-gray font-semibold'} icon={'fas fa-exclamation-triangle'} content={message.fail}></Alert>) : null}
+                { data.status === 201 ? (<Alert classes={'bg-green-600 border-green-600 text-green-600 font-semibold'} icon={'far fa-check-circle'} content={message.success}></Alert>) : null}
                 { isLoading ? (<Spinner></Spinner>) : null}
                 <div className="w-full pb-8 text-center">
                     <ul>

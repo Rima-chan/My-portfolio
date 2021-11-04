@@ -1,13 +1,23 @@
-import ProjectCard from "./ProjectCard";
 import { useContext, useEffect } from "react";
 import { ProjectsDataContext } from "../utils/context";
-import { projects } from '../data/data.js';
+import axios from "axios";
+import ProjectCard from "./ProjectCard";
+import { config } from '../data/configData';
 
 function Projects() {
     const { data, setData} = useContext(ProjectsDataContext);
+    const fetchData = async() => {
+        try {
+            const response = await axios.get(`${config.production}/projects`);
+            console.log(response.data);
+            setData(response.data);
+        } catch(e) {
+            console.log(e);
+        } 
+    }
     useEffect(() => {
-        setData(projects.data);
-    }, [setData])
+        fetchData();
+    }, [])
     return(
         <>
         <div className="px-8 md:mx-8 md:px-0 lg:mx-10 xl:mx-16 mt-10 mb-14" id="projects">
@@ -16,9 +26,6 @@ function Projects() {
                 {data && data.map((project) => (
                     <ProjectCard project={project} key={project.id}></ProjectCard>
                 ))}
-                {/* {data && data.map((project) => (
-                    <p key={project.id}>{project.title}</p>
-                ))} */}
             </section>
         </div>
         </>

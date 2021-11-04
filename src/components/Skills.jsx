@@ -1,9 +1,14 @@
 import SkillBar from "./SkillBar";
 import SkillItem from "./SkillItem";
-import { skillsList } from '../data/data';
 import bgSkill from '../images/bg-server.jpg';
 
 function Skills() {
+    const skillsList = {
+        "skill_1": "Intégrer une page web depuis une maquette",
+        "skill_2": "Intéragir avec l'utilisateur et des services externes en JavaScript",
+        "skill_3": "Concevoir un serveur NodeJS et une base de données sécurisés",
+        "skill_4": "Optimiser la visibilité (SEO) et l'accessbilité d'un site",
+    }
     return(
         <>
         <div className="bg-cover bg-no-repeat pb-16" style={{ backgroundImage: `url(${bgSkill})`}} id="skills">

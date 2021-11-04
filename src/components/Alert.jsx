@@ -1,5 +1,4 @@
 function Alert(props) {
-
     return(
         <>
         <div className={`block text-sm text-left ${props.classes} bg-opacity-10 h-12 flex items-center rounded-md p-4 my-3 border`} role="alert">

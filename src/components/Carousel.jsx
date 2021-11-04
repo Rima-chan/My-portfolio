@@ -46,7 +46,7 @@ import { useState, createRef, React } from 'react';
           </button>
         );
         const imageName = (filename) => {
-            const fullFilename = filename.split('/media/')[1];
+            const fullFilename = filename.split('/images/')[1];
             const name = fullFilename.split('.')[0];
             return name;
         };

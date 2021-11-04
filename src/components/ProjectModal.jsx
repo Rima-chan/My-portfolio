@@ -11,7 +11,7 @@ function ProjectModal(props) {
         <div 
           className="group flex flex-col items-center justify-center w-full text-center cursor-pointer pb-5 px-3 md:px-2 group-hover:bg-gray-300 group-hover:bg-opacity-40 transition-colors duration-200 ease-in-out"
           onClick={() => setShowModal(true)}>
-                <span className="inline-block w-full text-center pt-4"><i className="fas fa-arrow-down text-2xl text-gray-800 animate-bounce group-hover:text-red-500"></i></span>
+                <span className="inline-block w-full text-center pt-4"><i className="fas fa-arrow-down text-2xl text-red-500 animate-bounce group-hover:text-gray-800"></i></span>
                 <h3 className="font-semibold uppercase pt-2">{props.project.title}</h3>
                 <p className="font-light uppercase text-sm pt-3">{props.project.langages}</p>
         </div>
