@@ -17,6 +17,7 @@ Created in another project.
 ## Installation
 
 * Download project or clone it via git
+* Download and check instructions for Backend [Portfolio Backend](https://github.com/Rima-chan/portfolio-backend.git)
 * Follow these instructions 
 ### Development : `yarn start` 
 
