@@ -1,6 +1,9 @@
+import { useState } from "react";
+import axios from "axios";
 import SkillBar from "./SkillBar";
 import SkillItem from "./SkillItem";
 import bgSkill from '../images/bg-server.jpg';
+import { getApiUrl, config } from "../data/configData";
 
 function Skills() {
     const skillsList = {
@@ -8,6 +11,21 @@ function Skills() {
         "skill_2": "Intéragir avec l'utilisateur et des services externes en JavaScript",
         "skill_3": "Concevoir un serveur NodeJS et une base de données sécurisés",
         "skill_4": "Optimiser la visibilité (SEO) et l'accessbilité d'un site",
+    };
+    const [ file, setFile ] = useState(null);
+    const [ error, setError ] = useState(false);
+    const fetchData = async() => {
+        try {
+            const response = await axios.get(`${config.dev}/download`);
+            setFile(response.data);
+        } catch(e) {
+            console.log(e);
+            setError(true);
+        }
+    };
+    const downloadUrl = getApiUrl() + '/download';
+    const downloadCV = () => {
+        fetchData();
     }
     return(
         <>
@@ -38,6 +56,15 @@ function Skills() {
                     <SkillItem content={skillsList.skill_2} icon="fa-laptop"></SkillItem>
                     <SkillItem content={skillsList.skill_3} icon="fa-database"></SkillItem>
                     <SkillItem content={skillsList.skill_4} icon="fa-search"></SkillItem>
+                    <a 
+                      href={downloadUrl}
+                      download="marie_beaujeu_cv.pdf"
+                      aria-label="Télécharger un CV"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick = {downloadCV}
+                      className="bg-red-500 text-white font-semibold uppercase text-sm rounded self-center text-center sm:w-3/4 md:w-1/2 p-2"
+                      >Télécharger un CV</a>
                 </div>
             </div>
         </div>

@@ -70,7 +70,7 @@ module.exports = {
         },
       },
       animation: {
-        'slide-in-left': 'slide-in-left 1s ease-out',
+        'slide-in-left': 'slide-in-left 400ms ease-out',
         'slide-out-left': 'slide-out-left 1s ease-in',
         'skill-bar': 'skill-bar 2s ease-in-out',
         'fade-in': 'fade-in 1s ease-linear'

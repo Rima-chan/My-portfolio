@@ -1,33 +1,40 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Alert from "./Alert";
 import Spinner from "./Spinner";
-import { config } from '../data/configData';
+import { apiUrl } from '../data/configData';
 
 function Contact() {
     const { register, handleSubmit, formState: { errors }, reset} = useForm();
     const [ isLoading, setIsLoading ] = useState(false);
     const [data, setData ] = useState({});
     const [error, setError ] = useState(null);
+    const [closeMessage, setCloseMessage] = useState(false);
     const message = { success: 'Message bien envoyé ! ', fail: 'Oups, il y a eu un problème...' };
     const onSubmit = data => {
-        console.log(data);
         fetchData(data);
         reset();
     };
     const fetchData = async(data) => {
         setIsLoading(true);
         try {
-            const response = await axios.post(`${config.production}/contact`, data);
+            const response = await axios.post(`${apiUrl}/contact`, data);
             setData(response);
         } catch(e) {
             console.log(e);
             setError(e);
         } finally {
             setIsLoading(false);
+            setCloseMessage(false);
         }
     }
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setCloseMessage(true);
+        }, 8000)
+        return () => clearTimeout(timer);
+    }, [data]);
     return(
         <>
         <div className="flex flex-col items-center pb-12" id="contact">
@@ -85,8 +92,12 @@ function Contact() {
                     >
                         Envoyer</button>
                 </form>
-                { error ? (<Alert classes={'bg-gray-600 border-gray-600 text-green-gray font-semibold'} icon={'fas fa-exclamation-triangle'} content={message.fail}></Alert>) : null}
-                { data.status === 201 ? (<Alert classes={'bg-green-600 border-green-600 text-green-600 font-semibold'} icon={'far fa-check-circle'} content={message.success}></Alert>) : null}
+                { closeMessage ? null : (
+                    <div>
+                        { error ? (<Alert classes={'bg-gray-600 border-gray-600 text-green-gray font-semibold'} icon={'fas fa-exclamation-triangle'} content={message.fail}></Alert>) : null}
+                        { data.status === 201 ? (<Alert classes={'bg-green-600 border-green-600 text-green-600 font-semibold'} icon={'far fa-check-circle'} content={message.success}></Alert>) : null}
+                    </div>
+                )}
                 { isLoading ? (<Spinner></Spinner>) : null}
                 <div className="w-full pb-8 text-center">
                     <ul>

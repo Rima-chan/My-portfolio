@@ -2,7 +2,7 @@ import bgImage from '../images/bg-pc-coffe.jpg';
 
 function Hero() {
     return(
-        <div className="bg-cover bg-fixed w-screen h-full z-0"
+        <div className="bg-cover bg-fixed w-screen h-full z-0" id="home"
             style={{ backgroundImage: `url(${bgImage})`}}
         >
         <div className="text-white text-center pb-32 pt-48">

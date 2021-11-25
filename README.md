@@ -1,24 +1,35 @@
-# Getting Started with Create React App
+# Marie Beaujeu Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Front End
 
-## Available Scripts
+* Tailwind
+* React
+* GH pages for cloud deployment
 
-In the project directory, you can run:
+## Back End
 
-### `yarn start`
+Created in another project. 
+
+* Node JS (Express)
+* MongoDB
+* Heroku for cloud deployment
+
+## Installation
+
+* Download project or clone it via git
+* Follow these instructions 
+### Development : `yarn start` 
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### Production : `npm run deploy`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Generate a production build and deploy it to GitHub Pages
 
+## React infos
 ### `yarn build`
 
 Builds the app for production to the `build` folder.\
