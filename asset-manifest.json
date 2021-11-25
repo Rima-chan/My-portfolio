@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/My-portfolio/static/css/main.3ba6484b.chunk.css",
+    "main.css": "/My-portfolio/static/css/main.669ee029.chunk.css",
     "main.js": "/My-portfolio/static/js/main.b6e9d749.chunk.js",
     "main.js.map": "/My-portfolio/static/js/main.b6e9d749.chunk.js.map",
     "runtime-main.js": "/My-portfolio/static/js/runtime-main.18134f83.js",
@@ -10,7 +10,7 @@
     "static/js/3.cf12c703.chunk.js": "/My-portfolio/static/js/3.cf12c703.chunk.js",
     "static/js/3.cf12c703.chunk.js.map": "/My-portfolio/static/js/3.cf12c703.chunk.js.map",
     "index.html": "/My-portfolio/index.html",
-    "static/css/main.3ba6484b.chunk.css.map": "/My-portfolio/static/css/main.3ba6484b.chunk.css.map",
+    "static/css/main.669ee029.chunk.css.map": "/My-portfolio/static/css/main.669ee029.chunk.css.map",
     "static/js/2.95dc2158.chunk.js.LICENSE.txt": "/My-portfolio/static/js/2.95dc2158.chunk.js.LICENSE.txt",
     "static/media/bg-pc-coffe.271bb6ba.jpg": "/My-portfolio/static/media/bg-pc-coffe.271bb6ba.jpg",
     "static/media/bg-server.6046b736.jpg": "/My-portfolio/static/media/bg-server.6046b736.jpg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.18134f83.js",
     "static/js/2.95dc2158.chunk.js",
-    "static/css/main.3ba6484b.chunk.css",
+    "static/css/main.669ee029.chunk.css",
     "static/js/main.b6e9d749.chunk.js"
   ]
 }
