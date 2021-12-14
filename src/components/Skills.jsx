@@ -37,8 +37,8 @@ function Skills() {
                     <ul className="">
                         <li><SkillBar name="HTML - CSS" rate="w-9/10"></SkillBar></li>
                         <li><SkillBar name="JAVASCRIPT" rate="w-5/6"></SkillBar></li>
-                        <li><SkillBar name="REACT" rate="w-3/5"></SkillBar></li>
-                        <li><SkillBar name="VUE" rate="w-3/10"></SkillBar></li>
+                        <li><SkillBar name="REACT" rate="w-3/6"></SkillBar></li>
+                        <li><SkillBar name="VUE" rate="w-1/6"></SkillBar></li>
                     </ul>
                     <h3 className="text-center uppercase font-bold pt-5 pb-2">Back-end</h3>
                     <ul>
